@@ -1,0 +1,33 @@
+- request:
+    method: GET
+    url: ^/accounts/1$
+  response:
+    status: 200
+    headers:
+      content-type: application/json
+    body: >
+      {
+        "value": 10.0
+      }
+
+- request:
+    method: GET
+    url: ^/accounts/2$
+  response:
+    status: 404
+
+- request:
+    method: POST
+    url: ^/accounts$
+    post: >
+      { "id": 2,
+        "amount": 5.0
+      }
+  response:
+    status: 200
+    headers:
+      content-type: application/json
+    body: >
+      {
+        "message": "OK"
+      }

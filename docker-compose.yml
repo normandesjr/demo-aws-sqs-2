@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  stubby4j:
+    image: joncanning/stubby4j
+    container_name: stubby4j
+    ports:
+      - "8787:8787"
+      - "8882:8882"
+    environment:
+      STUBBY_PORT: 8882
+    volumes:
+      - ./stubby4j/integrations.yml:/usr/local/stubby.yml
