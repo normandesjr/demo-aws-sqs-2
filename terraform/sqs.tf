@@ -28,6 +28,4 @@ resource "aws_sqs_queue" "second_queue_fifo" {
 
     visibility_timeout_seconds  = 30
     receive_wait_time_seconds   = 20
-//    content_based_deduplication = true
-
 }
